@@ -1,0 +1,77 @@
+{
+  "databases": [
+    {
+      "key": "ENERGY",
+      "name": "電力会社/ガス会社/エネルギー調達会社",
+      "database_id": "676fd841-a42c-820f-8171-81afe5ca2463",
+      "impact_property_type": "status",
+      "focus": [
+        "Article 6進捗",
+        "JCM動向",
+        "燃料調達先の政治・治安情勢",
+        "排出量取引価格",
+        "サプライチェーン人権リスク"
+      ]
+    },
+    {
+      "key": "TRADING",
+      "name": "商社",
+      "database_id": "5effd841-a42c-824c-95b3-01fd426199b3",
+      "impact_property_type": "status",
+      "focus": [
+        "クックストーブ等プレイヤー動向(BURN, upenergy等)",
+        "新規クレジット創出案件",
+        "アフリカ地政学リスク",
+        "投資先リスク管理"
+      ]
+    },
+    {
+      "key": "AVIATION",
+      "name": "航空会社",
+      "database_id": "485fd841-a42c-8262-b818-01ea557261ba",
+      "impact_property_type": "status",
+      "focus": [
+        "CORSIA適格クレジット動向",
+        "ICAO発表",
+        "SAF規制",
+        "航空環境規制"
+      ]
+    },
+    {
+      "key": "BANKING",
+      "name": "銀行",
+      "database_id": "392fd841-a42c-83ab-bf8f-01d8cf74ee12",
+      "impact_property_type": "select",
+      "focus": [
+        "カーボンインシュアランス動向",
+        "ICVCM CCP格付け",
+        "ESG投融資レピュテーションリスク"
+      ]
+    },
+    {
+      "key": "制度",
+      "name": "制度・規制",
+      "database_id": "3aefd841-a42c-817f-b86b-c452b6376e2b",
+      "impact_property_type": "select",
+      "focus": [
+        "EU ETS制度変更",
+        "CBAM運用",
+        "GX-ETS",
+        "CORSIA Phase変更",
+        "Article 6運用規則",
+        "ICVCM CCP基準改定",
+        "グリーンクレーム指令",
+        "各国NDC更新"
+      ]
+    }
+  ],
+  "common_properties": {
+    "title": "",
+    "date": "配信日",
+    "url": "元記事URL / ソース名",
+    "source_select": "ニュースサイト名",
+    "impact": "インパクト度"
+  },
+  "notion_api_version": "2022-06-28",
+  "notion_endpoint": "https://api.notion.com/v1/pages"
+}

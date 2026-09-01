@@ -1,0 +1,47 @@
+{
+  "queries": [
+    {
+      "id": 1,
+      "template": "carbon credit market news {month} {year}",
+      "description": "カーボンクレジット市場全般"
+    },
+    {
+      "id": 2,
+      "template": "CORSIA aviation carbon offset SAF {month} {year} latest",
+      "description": "航空CORSIA・SAF"
+    },
+    {
+      "id": 3,
+      "template": "Article 6 Paris Agreement ITMO carbon credit {month} {year}",
+      "description": "Article 6・ITMO"
+    },
+    {
+      "id": 4,
+      "template": "ICVCM CCP carbon insurance ESG {month} {year}",
+      "description": "ICVCM・CCP・ESG"
+    },
+    {
+      "id": 5,
+      "template": "cookstove Africa carbon credit BURN upenergy {month} {year}",
+      "description": "アフリカ・クックストーブ"
+    },
+    {
+      "id": 6,
+      "template": "EU ETS emissions trading carbon price {month} {year}",
+      "description": "EU ETS価格"
+    },
+    {
+      "id": 7,
+      "template": "carbon market regulation policy update CBAM GX-ETS {month} {year}",
+      "description": "制度・規制（CBAM, GX-ETS等）"
+    }
+  ],
+  "optional_queries": [
+    {
+      "id": 8,
+      "template": "JCM Japan bilateral credit mechanism {year}",
+      "description": "JCM（JCM関連トピックが少ない場合に追加）",
+      "condition": "JCM-related topics have been sparse"
+    }
+  ]
+}
