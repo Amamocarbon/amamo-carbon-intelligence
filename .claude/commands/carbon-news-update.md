@@ -29,29 +29,9 @@ Aim for **2-4 articles per DB** (10-20 total per run). Cross-posting to multiple
 
 Read DB configurations from `config/databases.json`.
 
-### Method A: Notion MCP (preferred)
+### Method A: curl + NOTION_API_TOKEN (standard)
 
-Use the `notion-create-pages` tool with `database_id` parent. Properties are key-value pairs matching the DB schema.
-
-Example:
-```
-Tool: notion-create-pages
-parent: {"type": "database_id", "database_id": "DB_ID_HERE"}
-pages: [{
-  "properties": {
-    "": "📢 日本語タイトル",
-    "配信日": "YYYY-MM-DD",
-    "元記事URL / ソース名": "ARTICLE_URL",
-    "ニュースサイト名": "SOURCE_NAME",
-    "インパクト度": "高"
-  },
-  "content": "### 概要\n- 要約ポイント1\n- 要約ポイント2\n\n### 業界への影響\n- 影響分析1\n- 影響分析2\n\n### 推奨アクション\n- アクション1\n- アクション2"
-}]
-```
-
-### Method B: curl fallback (if Notion MCP is unavailable)
-
-Read the NOTION_API_TOKEN from `.env`. Use curl to POST to the Notion API.
+Read the NOTION_API_TOKEN from `.env` or the environment variable. Use curl to POST to the Notion API. This is the standard method for both local and cloud execution.
 
 **CRITICAL: Property Type Difference** — Check `impact_property_type` in `databases.json` for each DB:
 - If `"status"`: use `{"status":{"name":"高"}}`

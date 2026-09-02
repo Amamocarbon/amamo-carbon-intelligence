@@ -14,11 +14,13 @@
 
 ## Notion認証
 
-### Method A: Notion MCP（推奨）
-Notion MCPコネクタが接続されている環境ではAPIトークン不要。`notion-create-pages`ツールが認証を自動処理する。クラウドエージェント（スケジュール実行）はこの方式を使用。
+### Method A: curl + NOTION_API_TOKEN（標準方式）
+ローカル実行・クラウドエージェント共通。`.env` ファイルまたは環境変数からAPIトークンを読み取り、curlでNotion APIを直接呼び出す。クラウドエージェント（スケジュール実行）ではプロンプト内でトークンがexportされる。
 
-### Method B: curl（ローカルフォールバック）
-Notion MCPが利用できない場合、`.env` ファイルのAPIトークンを使用:
+### Method B: Notion MCP（利用可能な場合のみ）
+Notion MCPコネクタの認証が正しく設定されている環境でのみ使用可能。現時点ではクラウド環境のNotion MCPは認証エラー(401)のため使用不可。
+
+### トークン設定:
 ```
 NOTION_API_TOKEN=ntn_xxxxx
 ```
