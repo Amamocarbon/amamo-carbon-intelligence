@@ -12,14 +12,16 @@
 - **`config/sources.json`** — 許可されたニュースソース名リスト、WebFetchブロック対象ドメイン
 - **`config/search-queries.json`** — 検索クエリテンプレート
 
-## Notion API認証
+## Notion認証
 
-Notion APIトークンは `.env` ファイルから読み取ること:
+### Method A: Notion MCP（推奨）
+Notion MCPコネクタが接続されている環境ではAPIトークン不要。`notion-create-pages`ツールが認証を自動処理する。クラウドエージェント（スケジュール実行）はこの方式を使用。
 
+### Method B: curl（ローカルフォールバック）
+Notion MCPが利用できない場合、`.env` ファイルのAPIトークンを使用:
 ```
 NOTION_API_TOKEN=ntn_xxxxx
 ```
-
 **セキュリティ注意**: `.env` はgitignoreされている。新しい環境では `.env.example` をコピーして `.env` を作成し、トークンを設定すること。
 
 ## 実行方法
